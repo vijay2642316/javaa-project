@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <title>Welcome To Registration Form</title>
+  </head>
+
+	<body>
+	<!-- Main div code -->
+	<div id="main">
+	<div class="h-tag">
+	<h2>VACCINE REGISTRATION</h2>
+	</div>
+	<!-- create account div -->
+	<div class="login">
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<tr>
+	<td align="right">Enter Name :</td>
+	<td><input type="text" placeholder="Enter name here" id="t1" class="tb" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Aadhar Number :</td>
+	<td><input type="text" placeholder="Enter Aadhar Number here" id="t2" class="tb" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Gender :</td>
+	<td><input type="radio" name="gender" value="male" checked> Male
+        <br><input type="radio" name="gender" value="female"> Female
+	</tr>
+	<tr>
+	<td align="right">Enter Age:</td>
+	<td><input type="text" placeholder="Enter age here" id="t3" class="tb" /></td>
+	</tr>
+	<tr>
+        <td align="right">Enter Mobile Number :</td>
+	<td><input type="text" placeholder="Enter Mobile Number here" id="t4" class="tb" /></td>
+	</tr>
+	
+	<tr>
+	<td></td>
+	<td>
+	<input type="submit" value="REGISTER" class="btn" onclick="registration()" /></td>
+	</tr>
+	</table>
+	</div>
+	<!-- create account box ending here.. -->
+	</div>
+	<!-- Main div ending here... -->
+	</body>
+	</html>
+<head>
+    <style type="text/css">
+    
+    /* body css for whole page */
+    body
+    {
+	    margin:0px;
+	    background-color:#f26724;
+	    background-image:url(image/background.jpg);
+	    color:#f9fcf5;
+	    font-family:Arial, Helvetica, sans-serif;
+    }
+    
+    #main{width:600px; height:auto; overflow:hidden; padding-bottom:20px; margin-left:auto; margin-right:auto; 
+    border-radius:5px; padding-left:10px; margin-top:100px; border-top:3px double #f1f1f1; 
+    border-bottom:3px double #f1f1f1; padding-top:20px;
+    }
+    
+    #main table{font-family:"Comic Sans MS", cursive;}
+    /* css code for textbox */
+    #main .tb{height:28px; width:230px; border:1px solid #f26724; color:#fd7838; font-weight:bold; border-left:5px solid #f7f7f7; opacity:0.9;}
+    
+    #main .tb:focus{height:28px; border:1px solid #f26724; outline:none; border-left:5px solid #f7f7f7;}
+
+    /* css code for button*/
+    #main .btn{width:150px; height:32px; outline:none;  color:#f7f7f7; font-weight:bold; border:0px solid #f26724; 
+    text-shadow: 0px 0.5px 0.5px #fff; border-radius: 2px; font-weight: 600; color: #f26724; letter-spacing: 1px; 
+    font-size:14px; background-color:#f1f1f1; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;}
+  
+    #main .btn:hover{background-color:#f26724; outline:none;  border-radius: 2px; color:#f1f1f1; border:1px solid #f1f1f1;
+    -webkit-transition: 1s; -moz-transition: 1s; transition: 1s; }
+    
+    </style>
+    </head>
+
+
+
+    <head>
+    <script>
+
+   
+     function registration()
+	{
+
+		var name= document.getElementById("t1").value;
+		var aadhar= document.getElementById("t2").value;
+		var Age= document.getElementById("t3").value;
+		var mobile= document.getElementById("t4").value;			
+      	
+                var regexp=/^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}/;
+                var letters = /^[A-Za-z]+$/;	
+                var phone = /^[6-9]{1}[0-9]{9}$/;
+                if(name=='')
+		{
+			alert('Please enter your name');
+		}
+		else if(!letters.test(name))
+		{
+			alert('Name field required only alphabet characters');
+		}
+                else if(aadhar=='')
+                { 
+                        alert('Please enter your aadhar number');
+                }
+                else if(!regexp.test(aadhar))
+               {
+                   window.alert("Invalid Aadhar no.");
+                   
+               }              
+               else if(Age=='')
+               {
+                  alert("Enter age");
+                }
+               else if(Age<=18) 
+               {
+                //alert("You Are Not Eligible For Vaccination");
+                           window.open("error.html")
+                           window.close("registration.html")
+               }
+               
+               else if(mobile=='')
+               {
+                alert("Please enter your mobile number");
+                }
+               else if(!phone.test(mobile))
+                {
+                   alert("Invalid mobile number")
+                }
+               else
+		{				                            
+               //alert('Thank You for Registering');
+			   //Redirecting to other page or webste code. 
+			   window.open("index.html")
+                           window.close("registration.html")
+                            
+                         
+		}
+
+	}      
+    </script>
+    </head>   

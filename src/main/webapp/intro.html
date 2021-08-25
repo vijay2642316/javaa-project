@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="icon" href="" type="image/png"/>
+    <style>
+        body{
+        	margin:0;
+        	padding:0;
+        }
+        .second_section{
+            height: 695px;
+            width: 1300px;
+            line-height: 200%;
+            background-position: top;
+            background-size: cover;
+	    margin-top:-24px;
+	    margin-left:0px;
+        }
+        .first_section{
+            background-image: linear-gradient(aqua, darkSlateGray);
+            height: 50px;
+            text-align: center;
+	    margin-top:-20px;
+	    width: 1300px;
+	    margin-left:-2px;
+        }
+        .third_section{
+            background-image: linear-gradient(aqua, darkSlateGray);
+            height: 10px;
+	    margin-left:-6px;
+	    width: 80px;
+        }
+        .center{
+            margin: 0;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .button{
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #87CEEB;
+            border: none;
+            color: #8B008B;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+	    font-weight:bold;
+	    font-style:sans-serif;
+        }
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+            }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+            }
+
+        .button:hover span {
+            padding-right: 25px;
+            }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+            }
+            .contact{
+                background-color: black;
+                border: none;
+                color: aqua;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <div class="first_section" >
+        <h1 style="font-family: cursive;">WELCOME TO COVID VACCINATION REGISTRATION! ! !</h1>
+    </div>
+    <div class="second_section" style="background-image: url('MicrosoftTeams-image.png');">
+        <p class="matter" style="font-size: small;" >A COVID‑20202 vaccine is a vaccine intended to provide acquired immunity against severe acute respiratory syndrome coronavirus 2 (SARS‑CoV‑2), the virus causing coronavirus disease 2019 (COVID‑19). Prior to the COVID‑19 pandemic, there was an established body of knowledge about the structure and function of coronaviruses causing diseases like severe acute respiratory syndrome (SARS) and Middle East respiratory syndrome (MERS), which enabled accelerated development of various vaccine technologies during early 2020.[1] On 10 January 2020, the SARS-CoV-2 genetic sequence data was shared through GISAID, and by 19 March, the global pharmaceutical industry announced a major commitment to address COVID-19.[2] <br><br>
+            So get vaccinated as soon as possible ....STAY POSITIVE BUT DON'T BE POSITIVE</p>
+            <div class="center">
+	         <a href="registration.html">
+                <button class="button" style="vertical-align:middle" title=""><span>REGISTER HERE</span></button>
+	        </a>
+            </div>
+    </div>
+    </body>
+</html>

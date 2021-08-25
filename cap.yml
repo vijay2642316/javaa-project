@@ -1,0 +1,7 @@
+- hosts: localhost
+  become: yes
+  tasks:
+  - name: building image 
+    shell :  "docker image build -t covid:latest /home/vijay/Music/"
+  - name: running container of the built image 
+    shell : "docker container run -d -p 3333:5050 covid:latest"

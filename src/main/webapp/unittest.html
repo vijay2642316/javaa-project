@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.15.0.css">
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.15.0.js"></script>
+  <script>
+  function Registration(age1) {
+   return (age1 >= 18) ? "True" : "False";
+}
+    QUnit.module('Registration', function() {
+    QUnit.test('Validating_Age', function(assert) {
+    assert.equal(Registration(18),"False");
+    assert.equal(Registration(35),"True");
+    assert.equal(Registration(15),"False");
+    assert.equal(Registration(22),"True");
+    });
+  });
+</script>
+  </script>
+</body>
+</html>
